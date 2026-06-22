@@ -26,11 +26,11 @@
 
 ## **1.1 Background** 
 
-This document provides the official annotation guidelines for PothwariSentiment, the first publicly available sentiment analysis dataset for the Pothwari language. Pothwari (also written as Potohari, Potwari, or Pothohari) is an Indo-Aryan language spoken primarily in the RawalpindiIslamabad region of Punjab, Pakistan, and is classified under the Pahari-Pothwari dialect continuum. Despite being spoken by 35 to 40 million people, Pothwari has no existing labelled NLP resources in any public repository or published academic literature. This dataset addresses that gap. 
+This document provides the official annotation guidelines for PothwariSentiment, the first publicly available sentiment analysis dataset for the Pothwari language. Pothwari (also written as Potohari, Potwari, or Pothohari) is an Indo-Aryan language spoken primarily in the Rawalpindi-Islamabad region of Punjab, Pakistan, and is classified under the Pahari-Pothwari dialect continuum. Despite being spoken by 35 to 40 million people, Pothwari has no existing labelled NLP resources in any public repository or published academic literature. This dataset addresses that gap. 
 
 ## **1.2 Purpose** 
 
-I present the first structured written corpus of Pothwari in Nastaliq script, with sentiment annotation as the foundational NLP layer — providing the first machine-readable written resource for a language spoken by millions with zero prior digital representation . The goal of this annotation task is to assign a sentiment label to each Pothwari sentence in the dataset. Sentiment labels reflect the emotional tone expressed by the writer or speaker of the sentence. There are three possible labels: Positive, Negative, and Neutral. 
+I present the first structured written corpus of Pothwari in Nastaliq script, with sentiment annotation as the foundational NLP layer — providing the first machine-readable written resource for a language spoken by millions with zero prior digital representation. The goal of this annotation task is to assign a sentiment label to each Pothwari sentence in the dataset. Sentiment labels reflect the emotional tone expressed by the writer or speaker of the sentence. There are three possible labels: Positive, Negative, and Neutral. 
 
 Your labels must reflect the sentiment expressed in the sentence itself — not your personal opinion about the topic being discussed, and not how the sentence makes you feel as a reader. 
 
@@ -44,7 +44,7 @@ All sentences in the PothwariSentiment dataset originate exclusively from one so
 
 The dataset is constructed entirely through structured elicitation from two native Pothwari speakers: 
 
-- The project lead, a native speaker of Rawalpindi-region Pothwari based in Rawalpindi 
+- The project lead, a native speaker of the Rawalpindi-region Pothwari, based in Rawalpindi 
 
 - • One designated contributor, also a native speaker of Rawalpindi-region Pothwari, who additionally serves as the second annotator for inter-annotator agreement calculation 
 
@@ -52,7 +52,7 @@ Each contributor writes 1,000 original sentences in Nastaliq script following th
 
 ## **Reason of single source contribution:** 
 
-The decision to build this dataset exclusively through native speaker elicitation rather than collecting naturally occurring text reflects a documented reality: no naturally occurring written Pothwari corpus exists in any publicly accessible digital space. Pothwari is a predominantly oral language. Where speakers write online, they use Urdu script and vocabulary rather than authentic Pothwari linguistic forms. Collecting from such sources would produce an Urdu-dominant dataset with surface-level Pothwari vocabulary; not a genuine Pothwari corpus. 
+The decision to build this dataset exclusively through native speaker elicitation rather than collecting naturally occurring text reflects a documented reality: no naturally occurring written Pothwari corpus exists in any publicly accessible digital space. Pothwari is a predominantly oral language. Where speakers write online, they use Urdu script and vocabulary rather than authentic Pothwari linguistic forms. Collecting from such sources would produce an Urdu-dominant dataset with surface-level Pothwari vocabulary, not a genuine Pothwari corpus. 
 
 Elicitation from trained, linguistically aware native speakers, combined with the native speaker validation panel described in Section 2.5, ensures the dataset represents authentic Pothwari as spoken in the Rawalpindi and Northern Punjab region rather than an Urdu approximation. 
 
@@ -76,7 +76,7 @@ Elicitation from trained, linguistically aware native speakers, combined with th
 
 - **Do not include real phone numbers, CNIC numbers, precise home addresses, or any other personally identifiable information of any private individual in any submitted sentence.** If a sentence requires a name for grammatical completeness, use a generic placeholder name rather than a real person's full name. For example: "گا بندہ اے" is  احمد چن acceptable as a generic name usage. A sentence containing someone's full name, address, and phone number together is not acceptable. 
 
-- Public figures such as politicians, sports personalities or media figures may be named in sentences expressing opinions about their public roles without any anonymization requirement. 
+- Public figures such as politicians, sports personalities, or media figures may be named in sentences expressing opinions about their public roles without any anonymization requirement. 
 
 - The project lead reviews all sentences for compliance with this rule during the cleaning phase before sentences enter Label Studio. Any non-compliant sentence is returned to the contributor for revision. 
 
@@ -84,7 +84,7 @@ Elicitation from trained, linguistically aware native speakers, combined with th
 
 Before writing a single sentence for this dataset, both contributors confirm the following statement in writing via WhatsApp message to the project lead: 
 
-_"I confirm that I am a native speaker of Pothwari as spoken in the Rawalpindi region. I agree to contribute 1,000 original sentences to the PothwariSentiment dataset. I understand that my contributions will be published publicly as part of an open academic dataset under CC BY 4.0 license, meaning anyone can freely use, share, and build upon them with attribution to this project. My participation is entirely voluntary and I may withdraw at any time before the dataset is published."_ 
+_"I confirm that I am a native speaker of Pothwari as spoken in the Rawalpindi region. I agree to contribute 1,000 original sentences to the PothwariSentiment dataset. I understand that my contributions will be published publicly as part of an open academic dataset under the CC BY 4.0 license, meaning anyone can freely use, share, and build upon them with attribution to this project. My participation is entirely voluntary, and I may withdraw at any time before the dataset is published."_ 
 
 The project lead saves a screenshot of both consent messages in the private records folder before any sentence writing begins. No sentences are used without prior confirmed consent. 
 
@@ -100,9 +100,9 @@ PothwariSentiment targets an approximately equal distribution across all three s
 
 Unlike datasets that collect naturally occurring text — where label distribution is uncontrolled — this elicited dataset allows precise balance management from day one. Each contributor follows structured prompts (Section 1.7) that specify exactly how many sentences of each sentiment type to write per session. 
 
-**Running count tracking:** The project lead maintains a live spreadsheet tracking sentences per category updated after every contribution batch. This sheet is checked before each new writing session. If any category falls more than 10% below its target at any point during collection, the next session is dedicated exclusively to that category until balance is restored. 
+**Running count tracking:** The project lead maintains a live spreadsheet that tracks sentences per category, updated after each contribution batch. This sheet is checked before each new writing session. If any category falls more than 10% below its target at any point during collection, the next session is dedicated exclusively to that category until balance is restored. 
 
-**Contributors are told their category targets explicitly.** This transparency is methodologically sound and standard practice in elicited dataset construction. 
+**Contributors are explicitly told their category targets.** This transparency is methodologically sound and standard practice in elicited dataset construction. 
 
 ## **1.7 Structured Writing Prompts** 
 
@@ -168,7 +168,7 @@ Each contributor writes 1,000 sentences divided across five writing sessions of 
 
 - Ask a plain question with no emotional loading 
 
-- Announce something without expressing opinion about it 
+- Announce something without expressing an opinion about it 
 
 - Count, list, or enumerate something factually 
 
@@ -176,7 +176,7 @@ Each contributor writes 1,000 sentences divided across five writing sessions of 
 
 ## **Critical instruction for all sentences:** 
 
-Every sentence must pass the authenticity test in Section 2.3 Rule 3 before submission. Do not write sentences that sound like Urdu with Pothwari words inserted. Write sentences exactly as you would say them to a family member at home. If a sentence sounds formal or Urduinfluenced when you read it back, revise it before submitting. 
+Every sentence must pass the authenticity test in Section 2.3 Rule 3 before submission. Do not write sentences that sound like Urdu with Pothwari words inserted. Write sentences exactly as you would say them to a family member at home. If a sentence sounds formal or Urdu-influenced when you read it back, revise it before submitting. 
 
 ## **Session management:** 
 
@@ -220,7 +220,7 @@ Pothwari and Urdu share the same script but have different grammatical markers. 
 |Feminine possessive|نی|کی|
 |Plural possessive|نے|کے|
 |First person singular present|آں|ہوں|
-|Second/third person plural present|<br>/او ےپ|ہیں|
+|Second/third person plural present|و ےپ|ہیں|
 |Past tense marker|سا|تھا / تھی / تھے|
 |Negation|نئیں|نہیں|
 |This/that|ایہہ / اوہ|یہ / وہ|
