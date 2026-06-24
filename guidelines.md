@@ -1,6 +1,6 @@
 # **PothwariSentiment Annotation Guidelines** 
 
-**Version:** 1.0 **Author:** Muhammad Wajih Ur Rehman **Date:** 22 June 2026 **Project:** dataset and sentiment corpus for the Pothwari language. **Affiliation:** Independent Researcher **License:** CC BY 4.0 **Contact:** wajhirehman1@gmail.com 
+**Version:** 1.1 **Author:** Muhammad Wajih Ur Rehman **Date:** 24 June 2026 **Project:** dataset and sentiment corpus for the Pothwari language. **Affiliation:** Independent Researcher **License:** CC BY 4.0 **Contact:** wajhirehman1@gmail.com 
 
 ## **Table Of Contents** 
 
