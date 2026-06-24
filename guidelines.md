@@ -182,6 +182,31 @@ Every sentence must pass the authenticity test in Section 2.3 Rule 3 before subm
 
 Do not write more than 200 sentences in a single day. Do not write all sentences of one category consecutively across multiple sessions — vary the categories within each session as specified. This prevents the dataset from having detectable stylistic patterns that reveal contributor fatigue or category-specific writing modes. 
 
+## **1.7.1 AI-Assisted Elicitation Methodology:**
+
+To ensure consistent sentiment balance across sessions and reduce cognitive load during sentence production, contributors use AI-generated English sentences as stimulus references during each writing session. This methodology is formally known as stimulus-based elicitation — a standard approach in low-resource language dataset construction where naturally occurring text is unavailable at scale.
+
+**How it works:**
+
+Before each writing session, the project lead generates 100 English reference sentences using a structured AI prompt. These sentences are distributed as 34 NEGATIVE, 33 POSITIVE, and 33 NEUTRAL examples covering varied everyday Pakistani topics and situations. The full AI prompt used to generate these references is archived in the /session_references/ folder of the project GitHub repository, one file per session, for complete methodological transparency.
+
+**Critical instructions:**
+
+Contributors use AI reference sentences as emotional and topical stimuli only. The process is:
+Step 1 — Read the English reference sentence and understand its emotion and topic
+Step 2 — Look away from the reference sentence completely before writing
+Step 3 — Ask yourself: how would I express this feeling or situation in natural Pothwari as I would speak it at home?
+Step 4 — Write that Pothwari sentence without looking at the English again
+Step 5 — Apply the authenticity test from Section 2.3 Rule 3 before finalising
+The English sentence and the resulting Pothwari sentence will share a sentiment category and general topic. They will not share vocabulary, sentence structure, or grammatical form. A Pothwari sentence that follows the syntactic structure of its English reference is not acceptable and must be rewritten from scratch.
+
+**Puropse:**
+
+Guaranteed sentiment balance across every session without manual counting during writing
+Topic diversity enforced by the reference prompt structure
+Edge case coverage: The AI prompt is designed to include sarcasm, rhetorical questions, blessings, and factual-sad sentences matching every edge case in Section 4
+Reduced cognitive burden on contributors: Topic generation is handled by the reference, allowing contributors to focus entirely on authentic Pothwari language production
+
 ## **2. Script, Language Variety, and Orthographic Standards** 
 
 ## **2.1 Script Decision** 
@@ -255,6 +280,9 @@ Note: Many words are shared between Pothwari and Urdu. Shared vocabulary is acce
 
 Before submitting any sentence, apply this test: would you say this sentence exactly this way to a family member at home in Pothwari? If the sentence sounds like formal Urdu with one or two Pothwari words, revise it. If it sounds like natural spoken Pothwari written down, submit it. 
 
+**Application to AI-referenced sentences:**
+When using an English reference sentence as a stimulus, the authenticity test becomes even more important. After writing your Pothwari sentence, compare it against the English reference. If your Pothwari sentence follows the same word order as English, uses direct translations of English phrases, or sounds like it was constructed from English rather than spoken naturally, discard it and write again without looking at the reference at all. The English reference should have influenced only your choice of topic and emotional territory, nothing else.
+
 ## **Rule 4 — Diacritics (Zabar, Zer, Pesh)** 
 
 Add diacritics where they are necessary to distinguish meaning or ensure correct pronunciation. Do not add diacritics to every word — that is unnecessary and inconsistent with how Nastaliq is normally written. Add them only where their absence would cause genuine ambiguity. 
@@ -285,23 +313,23 @@ To establish the linguistic legitimacy of the corpus and confirm that the Nastal
 
 ## **Process:** 
 
-Each panel member independently reviews a randomly selected sample of 100 sentences from the cleaned dataset. For each sentence they answer one question only: "Does this sentence sound like natural Pothwari as spoken in Rawalpindi, or does it sound like Urdu?" Response options are: Natural Pothwari / Sounds like Urdu / Uncertain. 
+Each panel member independently reviews a randomly selected sample of 100 sentences from the cleaned dataset. For each sentence, they answer one question only: "Does this sentence sound like natural Pothwari as spoken in Rawalpindi, or does it sound like Urdu?" Response options are: Natural Pothwari / Sounds like Urdu / Uncertain. 
 
-A sentence is flagged for revision if more than two panel members independently mark it as "Sounds like Urdu." Flagged sentences are returned to the contributing annotator for revision. If a sentence cannot be revised into natural Pothwari it is discarded. 
+A sentence is flagged for revision if more than two panel members independently mark it as "Sounds like Urdu." Flagged sentences are returned to the contributing annotator for revision. If a sentence cannot be revised into natural Pothwari, it is discarded. 
 
-**Documentation:** Each panel member's full name, approximate age, and neighborhood within Rawalpindi or Islamabad is recorded with their written consent via WhatsApp. This documentation is included in the dataset's published metadata as evidence of community validation. Panel members do not label sentiment, they assess linguistic authenticity only. 
+**Documentation:** Each panel member's full name, approximate age, and neighborhood within Rawalpindi or Islamabad is recorded with their written consent via WhatsApp. This documentation is included in the dataset's published metadata as evidence of community validation. Panel members do not label sentiment; they assess linguistic authenticity only. 
 
-**Purpose:** This step directly addresses the challenge of building a written corpus for an oral language. The two contributors are linguistically aware native speakers who produce high quality Pothwari sentences. The validation panel confirms that this quality extends to broader community recognition. Together they establish that the dataset represents the language as a community rather than two individuals' idiolects. 
+**Purpose:** This step directly addresses the challenge of building a written corpus for an oral language. The two contributors are linguistically aware native speakers who produce high-quality Pothwari sentences. The validation panel confirms that this quality extends to broader community recognition. Together, they establish that the dataset represents the language as a community rather than two individuals' idiolects. 
 
 ## **3. Label & Sentence Definitions** 
 
 ## **3.1 Definition of a Valid Sentence** 
 
-For the purposes of this dataset, a valid sentence is defined as follows: 
+For this dataset, a valid sentence is defined as follows: 
 
-**Length:** Between 5 and 50 words. Anything shorter than 5 words lacks sufficient context for reliable sentiment judgement. Anything longer than 50 words likely contains multiple sentiments and should be split or discarded. 
+**Length:** Between 5 and 50 words. Anything shorter than 5 words lacks sufficient context for reliable sentiment judgment. Anything longer than 50 words likely contains multiple sentiments and should be split or discarded. 
 
-**Unity:** One sentence expresses one coherent thought or emotion. If a statement contains two clearly separate ideas — even joined by "اور" or "پر" — it must be split into two separate meaningful sentences before submission. Each part must independently meet the 5 word minimum. 
+**Unity:** One sentence expresses one coherent thought or emotion. If a statement contains two clearly separate ideas — even joined by "اور" or "پر" — it must be split into two separate meaningful sentences before submission. Each part must independently meet the 5-word minimum. 
 
 **Completion:** A sentence must be grammatically complete and independently understandable without additional context. Incomplete thoughts, sentence fragments, or statements that only make sense when read alongside another sentence are not valid. 
 
@@ -313,13 +341,13 @@ For the purposes of this dataset, a valid sentence is defined as follows:
 
 - A complete factual statement about something observable 
 
-- A complete question with clear emotional tone or no emotional tone 
+- A complete question with a clear emotional tone or no emotional tone 
 
 - A complete blessing, prayer, or expression of feeling 
 
 ## **Examples of invalid sentences — discard these:** 
 
-- Sentences under 5 words even if emotionally clear 
+- Sentences under 5 words, even if emotionally clear 
 
 - Sentences over 50 words — split them first, then evaluate each part 
 
@@ -413,7 +441,7 @@ If you are not certain whether a sentence is sarcastic, label based on the liter
 
 ## **Example:** 
 
-- [Pothwari sentence meaning "Oh wonderful, you've broken it again" said mockingly] → NEGATIVE 
+- [Pothwari sentence meaning "Oh, wonderful, you've broken it again" said mockingly] → NEGATIVE 
 
 - [Pothwari sentence meaning "Great job" said sincerely as a compliment] → POSITIVE 
 
@@ -433,7 +461,7 @@ If the positive and negative elements are genuinely equal and you cannot determi
 
 It is natural for Pothwari speakers to mix Urdu or Punjabi words into their speech. This does not affect your labelling — assess the overall emotional tone of the sentence regardless of which language the individual words come from. 
 
-However, if a sentence is more than 60% Urdu words and contains barely any Pothwari vocabulary or grammar, do not label it. Select EXCLUDE instead and it will be removed from the dataset. 
+However, if a sentence is more than 60% Urdu words and contains barely any Pothwari vocabulary or grammar, do not label it. Select EXCLUDE instead, and it will be removed from the dataset. 
 
 ## **4.4 Questions** 
 
@@ -560,7 +588,7 @@ Follow these rules strictly throughout every annotation session:
 
 7. Take a minimum 10-minute break after every 50 sentences — consistency drops significantly without breaks 
 
-8. Do not go back and change previous labels unless you discover you fundamentally misunderstood a guideline, in which case inform the project lead before making any changes 
+8. Do not go back and change previous labels unless you discover you fundamentally misunderstood a guideline, in which case, inform the project lead before making any changes 
 
 9. If you notice a sentence that seems offensive, harmful, or deeply inappropriate, flag it for the project lead rather than labelling or excluding it yourself 
 
@@ -636,7 +664,7 @@ Type your sentences in any Urdu keyboard app on your phone and send them to the 
 
 ## **For the project lead when handling files:** 
 
-In Microsoft Excel: Never open a CSV file by double clicking it. Always open Excel first, go to Data → From Text/CSV → select your file → in the import wizard select UTF-8 encoding explicitly before finishing import. 
+In Microsoft Excel: Never open a CSV file by double-clicking it. Always open Excel first, go to Data → From Text/CSV → select your file → in the import wizard, select UTF-8 encoding explicitly before finishing import. 
 
 In Notepad or any text editor: When saving any file containing Pothwari text, go to File → Save As → change encoding dropdown from ANSI to UTF-8. 
 
@@ -702,17 +730,19 @@ Process:
 
 - Affected sentences are re-labelled from scratch under the new definition 
 
-- Version number increments to next whole number 
+- Version number increments to the next whole number 
 
 - All annotators are retrained on the specific change before resuming 
 
-- The reason for the change and number of sentences re-labelled is recorded in the version log 
+- The reason for the change and the number of sentences re-labelled is recorded in the version log 
 
 ## **9.5 Version Log** 
 
-|**Version**||**Date**|**Type**|**What Changed**|**Sentences**<br>**Affected**|
-|---|---|---|---|---|---|
-|1.0|22|June 2026|Initial|Document created|N/A|
+|**Version**|**Date**|**Type**|**What Changed**|**Sentences**<br>**Affected**|
+|---|---|---|---|---|
+|1.0|22 June 2026|Initial|Document created|N/A|
+|1.1|24 June 2026|Minor|Added Section 1.7.1 describing AI-assisted elicitation methodology and added authenticity guidance for AI-referenced sentences to Section 2.3 Rule 3|N/A Pre-collection update|
+
 
 
 
@@ -788,13 +818,13 @@ Upon completion of the annotated dataset, a baseline machine learning experiment
 
 ## **Dataset split:** 
 
-- Training set: 80% of final dataset (approximately 1,600 sentences) 
+- Training set: 80% of the final dataset (approximately 1,600 sentences) 
 
-- Test set: 20% of final dataset (approximately 400 sentences) 
+- Test set: 20% of the final dataset (approximately 400 sentences) 
 
 - Split is stratified — meaning each split contains approximately equal proportions of Positive, Negative, and Neutral labels 
 
-**Model:** Logistic Regression classifier using TF-IDF (Term Frequency-Inverse Document Frequency) character n-gram features. Character n-grams are used rather than word n-grams because Pothwari morphology is complex and character-level features capture subword patterns more effectively for low-resource languages. 
+**Model:** Logistic Regression classifier using TF-IDF (Term Frequency-Inverse Document Frequency) character n-gram features. Character n-grams are used rather than word n-grams because Pothwari morphology is complex, and character-level features capture subword patterns more effectively for low-resource languages. 
 
 Library: scikit-learn (Python) 
 
@@ -812,7 +842,7 @@ Library: scikit-learn (Python)
 
 ## **Purpose of Baseline:** 
 
-This experiment does not claim state-of-the-art performance. Its sole purpose is to demonstrate that the dataset contains learnable sentiment signal and is suitable for training machine learning classifiers. Results establish a benchmark for future researchers to improve upon. 
+This experiment does not claim state-of-the-art performance. Its sole purpose is to demonstrate that the dataset contains a learnable sentiment signal and is suitable for training machine learning classifiers. Results establish a benchmark for future researchers to improve upon. 
 
 ## **Reporting:** 
 
@@ -820,13 +850,13 @@ Results are reported in a confusion matrix and a classification report table in 
 
 ## **12. Target Journal: Data in Brief (Elsevier)** 
 
-Manuscript must follow Data in Brief article structure exactly: 
+Manuscript must follow the Data in Brief article structure exactly: 
 
-1. Specifications Table — mandatory structured table covering subject area, data type, data collection method, data source location, data accessibility, related research article 
+1. Specifications Table — mandatory structured table covering subject area, data type, data collection method, data source location, data accessibility, and related research article 
 
 2. Value of the Data — minimum 4 bullet points explaining why this data is useful, who benefits, and how it builds on existing work 
 
-3. Data Description — what the dataset contains, its structure, statistics 
+3. Data Description — what the dataset contains, its structure, and statistics 
 
 4. Experimental Design, Materials and Methods — how it was collected, annotated, and validated 
 
@@ -846,3 +876,6 @@ Submission checklist before sending:
 
 - All author information and ORCID included 
 
+
+
+*End of document*
